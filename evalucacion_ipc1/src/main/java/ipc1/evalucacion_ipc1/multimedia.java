@@ -21,4 +21,8 @@ abstract class multimedia {
     
     //clase reproducir
     public abstract void reproducir();
+    
+    public String getNombre(){
+        return nombre;
+    }
 }

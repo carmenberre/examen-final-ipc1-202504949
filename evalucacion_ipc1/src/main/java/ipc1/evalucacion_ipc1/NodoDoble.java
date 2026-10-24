@@ -10,9 +10,9 @@ package ipc1.evalucacion_ipc1;
  */
 public class NodoDoble {
     //atributus
-    private cancion cancion;
-    private NodoDoble anterior;
-    private NodoDoble siguiente;
+    public cancion cancion;
+    public NodoDoble anterior;
+    public NodoDoble siguiente;
     
     //constructor
     public NodoDoble(cancion cancion){

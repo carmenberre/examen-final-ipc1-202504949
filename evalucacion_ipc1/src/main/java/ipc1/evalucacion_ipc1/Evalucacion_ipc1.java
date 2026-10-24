@@ -19,8 +19,16 @@ public class Evalucacion_ipc1 {
         cancion cancion2 = new cancion("Cancion 2", 210, "otro artista");
         cancion cancion3 = new cancion("Cancion 3", 240, "y otro otro artista");
         
-        cancion1.reproducir();
-        cancion2.reproducir();
-        cancion3.reproducir();
+        //cancion1.reproducir();
+        //cancion2.reproducir();
+        //cancion3.reproducir();
+        
+        Playlist lista = new Playlist();
+        
+        lista.AgregarCancion(cancion1);
+        lista.AgregarCancion(cancion2);
+        lista.AgregarCancion(cancion3);
+        
+        lista.mostrarPlaylist();
     }
 }

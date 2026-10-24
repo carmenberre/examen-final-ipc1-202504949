@@ -24,7 +24,8 @@ public class cancion extends multimedia{
     
     //clsde reproducir
     @Override
-    public void reproducir() {
+    public void reproducir(){
         print("Reproduciendo: " + nombre);
     }
+    
 }
