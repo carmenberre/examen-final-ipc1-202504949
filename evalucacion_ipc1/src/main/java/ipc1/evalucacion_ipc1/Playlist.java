@@ -53,4 +53,51 @@ public class Playlist {
             orden++;
         }
     }
+    
+    //para pasar siguiente a actual
+    public NodoDoble siguiente(){
+        if(actual == null || actual.siguiente == null){
+            return null;
+        }
+        actual = actual.siguiente;
+        actual.cancion.reproducir();
+        return actual;
+    }
+    
+    //para pasar siguiente a actual
+    public NodoDoble anterior(){
+        if(actual == null || actual.anterior == null){
+            return null;
+        }
+        actual = actual.anterior;
+        actual.cancion.reproducir();
+        return actual;
+    }
+    
+    public void eliminarActual(){
+        if(actual == null){
+            return;
+        }
+        NodoDoble eliminar = actual;
+        if (cabeza == cola){
+            cabeza = null;
+            cola = null;
+            actual = null;
+        }else if (actual == cabeza) {
+            cabeza = cabeza.siguiente;
+            cabeza.anterior = null;
+            actual = cabeza;
+        } else if (actual == cola) {
+            cola = cola.anterior;
+            cola.siguiente = null;
+            actual = cola;
+        } else {
+            actual.anterior.siguiente = actual.siguiente;
+            actual.siguiente.anterior = actual.anterior;
+            actual = actual.siguiente;
+        }
+        eliminar.anterior = null;
+        eliminar.siguiente = null;
+        tamano--;
+    }
 }

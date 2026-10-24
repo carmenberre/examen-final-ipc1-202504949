@@ -10,10 +10,6 @@ package ipc1.evalucacion_ipc1;
  */
 public class Evalucacion_ipc1 {
     
-    public static void print(Object texto) {
-        System.out.println(texto);
-    }
-    
     public static void main(String[] args) {
         cancion cancion1 = new cancion("Cancion 1", 180, "un artista");
         cancion cancion2 = new cancion("Cancion 2", 210, "otro artista");
@@ -29,6 +25,24 @@ public class Evalucacion_ipc1 {
         lista.AgregarCancion(cancion2);
         lista.AgregarCancion(cancion3);
         
+        //lista.mostrarPlaylist();
+        
+        System.out.println("Mostrar playlis: ");
+        lista.mostrarPlaylist();
+        
+        System.out.println("Siguiente: ");
+        lista.siguiente();
+        
+        System.out.println("Anterior: ");
+        lista.anterior();
+        
+        System.out.println("Siguiente: ");
+        lista.siguiente();
+        
+        System.out.println("Eliminar Actual: ");
+        lista.eliminarActual();
+        
+        System.out.println("Mostrar playlist: ");
         lista.mostrarPlaylist();
     }
 }
